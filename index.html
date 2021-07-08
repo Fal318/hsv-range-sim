@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <title>HSV</title>
+    <link href='Style/style.css' rel='stylesheet' />
+    <script type="text/javascript" src="Script/main.js"></script>
+    <script async src="https://docs.opencv.org/4.5.3/opencv.js"></script>
+</head>
+
+
+<body>
+    <div class="form">
+        <p>
+            H<input class="lower_hsv" type="number" name="h" value="0" min="0" max="179" step="1">
+            S<input class="lower_hsv" type="number" name="s" value="0" min="0" max="255" step="1">
+            V<input class="lower_hsv" type="number" name="v" value="0" min="0" max="255" step="1">
+            <span>&emsp;~&emsp;</span>
+            H<input class="upper_hsv" type="number" name="h" value="179" min="0" max="179" step="1">
+            S<input class="upper_hsv" type="number" name="s" value="255" min="0" max="255" step="1">
+            V<input class="upper_hsv" type="number" name="v" value="255" min="0" max="255" step="1">
+        </p>
+        <p>
+            <input type="file" id="input_file" accept="image/*">
+            <input type="submit" class="submit" value="実行">
+        </p>
+    </div>
+    <div class="input">
+        <p>Input</p>
+        <img id="canvas_input">
+    </div>
+    <div class="output">
+        <p>Output</p>
+        <canvas id="canvas_output"></canvas>
+    </div>
+
+</body>
+
+</html>
