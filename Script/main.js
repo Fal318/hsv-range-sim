@@ -35,7 +35,7 @@ function mask(img, range) {
     let mask = new cv.Mat();
     cv.cvtColor(img, mask, cv.COLOR_RGB2HSV)
     cv.inRange(mask, cv.matFromArray(3, 1, cv.CV_64FC1, range[0]), cv.matFromArray(3, 1, cv.CV_64FC1, range[1]), mask)
-    cv.bitwise_and(img, img, dst, mask = mask)
+    cv.bitwise_or(img, img, dst, mask = mask)
     cv.imshow('canvas_output', dst);
     dst.delete();
 }
